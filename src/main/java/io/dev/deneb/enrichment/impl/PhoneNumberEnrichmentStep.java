@@ -14,9 +14,7 @@ class PhoneNumberEnrichmentStep extends AbstractEnrichmentStep {
 
     private final PhoneNumberRepository phoneNumberRepository;
 
-    public PhoneNumberEnrichmentStep(
-            PhoneNumberRepository phoneNumberRepository
-    ) {
+    public PhoneNumberEnrichmentStep(PhoneNumberRepository phoneNumberRepository) {
         this.phoneNumberRepository = phoneNumberRepository;
     }
 

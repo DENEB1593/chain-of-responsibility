@@ -12,17 +12,16 @@ import java.util.Optional;
 @Order(2)
 class GeoLocationEnrichmentStep extends AbstractEnrichmentStep {
 
-  private final GeoLocationRepository geoLocationRepository;
+    private final GeoLocationRepository geoLocationRepository;
 
-  public GeoLocationEnrichmentStep(
-      GeoLocationRepository geoLocationRepository) {
-    this.geoLocationRepository = geoLocationRepository;
-  }
+    public GeoLocationEnrichmentStep(GeoLocationRepository geoLocationRepository) {
+        this.geoLocationRepository = geoLocationRepository;
+    }
 
-  @Override
-  protected Optional<Message> enrichAndApplyNext(Message message) {
-    return message.getValue("ip")
-        .flatMap(geoLocationRepository::findGeoLocationByIp)
-        .map(geo -> message.with("geo", geo.toString()));
-  }
+    @Override
+    protected Optional<Message> enrichAndApplyNext(Message message) {
+        return message.getValue("ip")
+                .flatMap(geoLocationRepository::findGeoLocationByIp)
+                .map(geo -> message.with("geo", geo.toString()));
+    }
 }

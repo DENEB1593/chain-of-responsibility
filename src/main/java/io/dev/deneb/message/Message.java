@@ -41,4 +41,10 @@ public class Message {
         return content != null ? content.hashCode() : 0;
     }
 
+    @Override
+    public String toString() {
+        return "Message{" +
+                "content=" + content +
+                '}';
+    }
 }
