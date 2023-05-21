@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-@Order(2)
+//@Order(2)
 class GeoLocationEnrichmentStep extends AbstractEnrichmentStep {
 
     private final GeoLocationRepository geoLocationRepository;

@@ -32,6 +32,7 @@ public class ApplicationStartedEventHandler {
                         )
                 )
         ));
+        // Message{content={geo=GeoLocation[x=12, y=13], SESSIONID=dfsjklfdjsafsdfadfa, phoneNumber=78005553535, userId=someId, age=42, ip=10.10.10.10}}
 
     }
 

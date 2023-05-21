@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-@Order(0)
+//@Order(0)
 class PhoneNumberEnrichmentStep extends AbstractEnrichmentStep {
 
     private final PhoneNumberRepository phoneNumberRepository;
